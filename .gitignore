@@ -1,0 +1,97 @@
+# beije-v4 Project Specific
+
+# Build outputs and distributions
+dist/
+build/
+.next/
+out/
+
+# Package managers and dependencies
+node_modules/
+package-lock.json
+yarn.lock
+.pnpm-lock.yaml
+
+# Environment configurations
+.env*
+backend/.env
+frontend/.env.local
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+prisma/dev.db*
+prisma/migrations/*/migration.sql
+
+# Application logs
+logs/
+*.log
+combined.log
+error.log
+access.log
+
+# Cache directories
+.cache/
+.parcel-cache/
+.turbo/
+.eslintcache
+
+# IDE and editor files
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Production and deployment
+.vercel/
+.netlify/
+.railway/
+
+# Testing and coverage
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+
+# Development artifacts
+.storybook-out/
+storybook-static/
+
+# TypeScript compilation
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# NestJS specific
+dist/
+build/
+
+# Next.js specific
+.next/
+out/
+
+# Prisma specific
+prisma/client/
+node_modules/.prisma/
+
+# Email service artifacts
+email-templates/compiled/
+
+# Local development
+.local/
+dev-dist/

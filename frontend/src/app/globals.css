@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'BoldFont';
+  src: url('/fonts/font-bold.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RegularFont';
+  src: url('/fonts/font-normal.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --foreground: #2c3e50;
+  --card-background: rgba(255, 255, 255, 0.95);
+  --shadow: rgba(0, 0, 0, 0.1);
+  --primary-gradient: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --font-bold: 'BoldFont', Arial, sans-serif;
+  --font-regular: 'RegularFont', Arial, sans-serif;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    --foreground: #ecf0f1;
+    --card-background: rgba(44, 62, 80, 0.95);
+    --shadow: rgba(0, 0, 0, 0.3);
+  }
+} */
+
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  background-attachment: fixed;
+  font-family: var(--font-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gradient);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+}
+
+/* Animated background particles */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
+
+.font-bold {
+  font-family: var(--font-bold) !important;
+}
+
+.font-regular {
+  font-family: var(--font-regular) !important;
+}
+
+/* Tailwind ile uyumlu utility classes */
+.font-bold-family {
+  font-family: var(--font-bold) !important;
+}
+
+.font-regular-family {
+  font-family: var(--font-regular) !important;
+}
