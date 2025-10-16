@@ -114,5 +114,4 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 ## 👨‍💻 Geliştirici
 
-- **GitHub**: [@kullanici-adi](https://github.com/kullanici-adi)
-- **Email**: email@example.com
+- **GitHub**: [@erkintekin](https://github.com/erkintekin)
